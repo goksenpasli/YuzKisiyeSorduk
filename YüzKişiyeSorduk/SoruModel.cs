@@ -8,10 +8,11 @@ namespace YüzKişiyeSorduk
         private Visibility göster = Visibility.Hidden;
 
         private int puan;
+        private bool enPopüler;
 
         public Visibility Göster
         {
-            get { return göster; }
+            get => göster;
 
             set
             {
@@ -25,7 +26,7 @@ namespace YüzKişiyeSorduk
 
         public int Puan
         {
-            get { return puan; }
+            get => puan;
 
             set
             {
@@ -36,6 +37,21 @@ namespace YüzKişiyeSorduk
                 }
             }
         }
+
+        public bool EnPopüler
+        {
+            get => enPopüler;
+
+            set
+            {
+                if (enPopüler != value)
+                {
+                    enPopüler = value;
+                    OnPropertyChanged(nameof(EnPopüler));
+                }
+            }
+        }
+
     }
 
     public class SoruModel : InpcBase
@@ -48,7 +64,7 @@ namespace YüzKişiyeSorduk
 
         public string Metin
         {
-            get { return metin; }
+            get => metin;
 
             set
             {
@@ -62,7 +78,7 @@ namespace YüzKişiyeSorduk
 
         public int Sıra
         {
-            get { return sıra; }
+            get => sıra;
 
             set
             {

@@ -10,7 +10,6 @@ namespace YüzKişiyeSorduk
         public SoruView()
         {
             InitializeComponent();
-            DataContext = new SoruViewModel();
         }
     }
 }

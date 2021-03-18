@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Xml.Linq;
@@ -14,7 +15,14 @@ namespace YüzKişiyeSorduk
         public SoruViewModel()
         {
             Sorular = new ObservableCollection<SoruModel>();
-            Göster = new RelayCommand<object>(parameter => (parameter as CevapModel).Göster = Visibility.Visible, parameter => true);
+            Göster = new RelayCommand<object>(parameter =>
+            {
+                (parameter as CevapModel).Göster = Visibility.Visible;
+                if (Cevaplar.Max(z=>z.Puan) == (parameter as CevapModel)?.Puan)
+                {
+                    (parameter as CevapModel).EnPopüler = true;
+                }
+            }, parameter => true);
 
             if (!DesignerProperties.GetIsInDesignMode(new DependencyObject()))
             {
