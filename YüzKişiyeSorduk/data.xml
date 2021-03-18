@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sorular>
+    <Soru Metin="Kümeste Yaşayan Bir Hayvan" Sıra="1">
+        <Cevaplar>
+            <Cevap Metin="Tavuk" Puan="40" Sıra="1" />
+            <Cevap Metin="Horoz" Puan="30" Sıra="2" />
+        </Cevaplar>
+    </Soru>
+    <Soru Metin="Evde Yaşayan Bir Hayvan" Sıra="2">
+        <Cevaplar>
+            <Cevap Metin="Kedi" Puan="40" Sıra="1" />
+            <Cevap Metin="Köpek" Puan="30" Sıra="2" />
+        </Cevaplar>
+    </Soru>
+</Sorular>
